@@ -1,0 +1,729 @@
+/* ==========================================================================
+   Level 5 Fitness - Fat Loss Coaching (Responsive 2-Column Hero Section)
+   ========================================================================== */
+
+:root {
+  --bg-dark: #060908;
+  --token-41402d7e-10ef-47ba-9616-98a814e4d4fe: #00d55a;
+  --emerald-primary: #00d55a;
+  --emerald-glow: rgba(0, 213, 90, 0.4);
+  
+  --text-main: #ffffff;
+  --text-muted: #a1a1aa;
+  --font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-family);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================================================
+   Hero Section & Full-Cover Background Fitting
+   ========================================================================== */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--bg-dark);
+}
+
+.hero-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.55;
+}
+
+.hero-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: 
+    linear-gradient(to right, rgba(6, 9, 8, 0.95) 0%, rgba(6, 9, 8, 0.5) 45%, rgba(6, 9, 8, 0.2) 75%, rgba(6, 9, 8, 0.85) 100%),
+    linear-gradient(to bottom, rgba(6, 9, 8, 0.2) 0%, rgba(6, 9, 8, 0.4) 60%, rgba(6, 9, 8, 0.98) 98%);
+}
+
+/* ==========================================================================
+   2-Column Split Container
+   ========================================================================== */
+
+.hero-container {
+  position: relative;
+  z-index: 5;
+  max-width: 1320px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 32px 10px 32px;
+}
+
+.hero-split-layout {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 36px;
+  align-items: end;
+}
+
+.hero-content-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+ 
+}
+
+.hero-image-col {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+}
+
+/* ==========================================================================
+   Pre-Headline Event Badge
+   ========================================================================== */
+
+.badge-stack {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 18px;
+}
+
+.event-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(4, 16, 11, 0.88);
+  border: 1.5px solid #00d55a;
+  padding: 8px 22px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  box-shadow: 
+    0 0 20px rgba(0, 213, 90, 0.4),
+    inset 0 0 15px rgba(0, 213, 90, 0.25);
+  backdrop-filter: blur(12px);
+}
+
+.red-live-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #e11d48;
+  box-shadow: 0 0 8px #e11d48;
+  display: inline-block;
+  margin-right: 2px;
+}
+
+.badge-text-green {
+  color: #00d55a;
+  font-weight: 800;
+}
+
+.badge-text-white {
+  color: #ffffff;
+  font-weight: 800;
+}
+
+/* ==========================================================================
+   Main Headline Typography
+   ========================================================================== */
+
+.hero-headline {
+  font-size: clamp(1.8rem, 2.6vw, 2.7rem);
+  line-height: 1.22;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 18px;
+  text-align: left;
+}
+
+.gradient-accent {
+  background: linear-gradient(90deg, var(--token-41402d7e-10ef-47ba-9616-98a814e4d4fe, rgb(0, 213, 90)) 0%, rgb(255, 255, 255) 88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headline-subtext {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 800;
+}
+
+/* Subheadline Description */
+.hero-description {
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+  max-width: 580px;
+  margin: 0 0 22px 0;
+  font-weight: 500;
+  text-align: left;
+}
+
+/* ==========================================================================
+   Feature Pills Grid
+   ========================================================================== */
+
+.feature-pills-grid {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.pill-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  box-shadow: none;
+  transition: transform 0.2s ease;
+}
+
+.pill-item:hover {
+  background: transparent;
+  border-color: transparent;
+  transform: translateY(-1px);
+  box-shadow: none;
+}
+
+.icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(0, 213, 90, 0.12);
+  border: 1px solid rgba(0, 213, 90, 0.35);
+  box-shadow: inset 0 0 10px rgba(0, 213, 90, 0.15);
+  flex-shrink: 0;
+}
+
+.pill-text {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  letter-spacing: -0.01em;
+}
+
+/* ==========================================================================
+   Ticket Pass Section (Positioned Below Hero Section)
+   ========================================================================== */
+
+.ticket-section {
+  width: 100%;
+  padding: 50px 24px;
+  background-color: var(--bg-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.ticket-container {
+  max-width: 1320px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ==========================================================================
+   Exact Event Ticket Pass (Black & White Scalloped Ticket)
+   ========================================================================== */
+
+.ticket-wrapper-exact {
+  position: absolute;
+  bottom: 0px;
+   z-index: 30;
+  width: 100%;
+  max-width: 460px;
+  margin-bottom: 0;
+  filter: drop-shadow(0 20px 45px rgba(0, 0, 0, 0.95));
+  transition: transform 0.3s ease;
+}
+
+.gradient-ticket {
+  color: #00d55a !important;
+  font-weight: 800;
+}
+
+.ticket-wrapper-exact:hover {
+  transform: translateY(-3px);
+}
+
+.ticket-frame {
+  display: flex;
+  position: relative;
+  align-items: stretch;
+}
+
+.scallop-side {
+  width: 10px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  background-size: 10px 14px;
+  background-repeat: repeat-y;
+}
+
+.scallop-left {
+  background-image: radial-gradient(circle at -3px 7px, #000000 5px, #ffffff 5.5px);
+}
+
+.scallop-right {
+  background-image: radial-gradient(circle at 13px 7px, #000000 5px, #ffffff 5.5px);
+}
+
+.ticket-body-left {
+  flex: 3;
+  background: #ffffff;
+  color: #000000;
+  display: flex;
+  align-items: center;
+  padding: 12px 14px 12px 8px;
+  gap: 12px;
+}
+
+.ticket-vertical-barcode {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 8px;
+  border-right: 1.5px solid #e5e7eb;
+}
+
+.ticket-center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.exact-ticket-title {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  color: #374151;
+  margin-bottom: 2px;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+.ticket-brand-line {
+  white-space: nowrap;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.ticket-year {
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  color: #000000;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+.exact-ticket-date {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.exact-ticket-time {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #000000;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.exact-ticket-price-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+
+.exact-price-label {
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+}
+
+.exact-price-val {
+  font-size: 1.16rem;
+  font-weight: 900;
+  color: #000000;
+}
+
+.gradient-ticket {
+  background: linear-gradient(90deg, var(--token-41402d7e-10ef-47ba-9616-98a814e4d4fe, rgb(0, 213, 90)) 0%, rgb(0, 32, 20) 88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.exact-ticket-footer {
+  margin-top: 8px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #374151;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.perforated-divider {
+  width: 1px;
+  background: #ffffff;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.perforated-divider::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 0;
+  border-left: 2px dashed #000000;
+  z-index: 2;
+}
+
+.ticket-body-right {
+  flex: 1.5;
+  background: #ffffff;
+  color: #000000;
+  padding: 12px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stub-welcome {
+  font-size: 0.5rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  color: #4b5563;
+}
+
+.stub-admit-exact {
+  font-size: 0.95rem;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  color: #000000;
+  line-height: 1.1;
+  margin-bottom: 3px;
+}
+
+.stub-date-exact {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 3px;
+}
+
+.stub-detail-line {
+  font-size: 0.52rem;
+  font-weight: 800;
+  color: #374151;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.zoom {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  box-shadow: 0 2px 8px rgba(45, 140, 255, 0.35);
+  margin-top: 2px;
+}
+
+.stub-horizontal-barcode {
+  margin-top: 8px;
+}
+
+/* ==========================================================================
+   Coach Image Showcase
+   ========================================================================== */
+
+.coach-wrapper {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+}
+
+.coach-glow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 213, 90, 0.45) 0%, rgba(0, 213, 90, 0.12) 55%, transparent 75%);
+  filter: blur(45px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.coach-image {
+  position: relative;
+  z-index: 2;
+  max-height: 850px;
+  width: auto;
+  max-width: 130%;
+  object-fit: contain;
+  filter: drop-shadow(0 25px 50px rgba(0, 0, 0, 0.9));
+  transform: translateY(-20px);
+  -webkit-mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 90%, transparent 100%);
+}
+
+/* ==========================================================================
+   Primary Call To Action Button
+   ========================================================================== */
+
+.cta-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-bottom: 22px;
+}
+
+.btn-hero-cta {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  width: 100%;
+  max-width: 460px;
+  background: linear-gradient(135deg, #00e664 0%, #00b84d 100%);
+  color: #040906;
+  font-size: 1.08rem;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  padding: 16px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.cta-text {
+  text-align: center;
+}
+
+.btn-hero-cta:hover {
+  transform: translateY(-2px) scale(1.025);
+  background: linear-gradient(135deg, #24f27d 0%, #00c954 100%);
+  box-shadow: none;
+}
+
+.cta-arrow-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(4, 9, 6, 0.18);
+  transition: transform 0.25s ease, background 0.25s ease;
+  flex-shrink: 0;
+}
+
+.btn-hero-cta:hover .cta-arrow-badge {
+  transform: translateX(4px);
+  background: rgba(4, 9, 6, 0.3);
+}
+
+.cta-live-dot {
+  animation: pulse-dot 1.5s infinite;
+  margin-right: 0;
+}
+
+@keyframes pulse-dot {
+  0% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); opacity: 0.4; }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.cta-arrow {
+  transition: transform 0.2s ease;
+}
+
+ 
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+
+@media (max-width: 1024px) {
+  .hero-split-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .hero-content-col {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .badge-stack {
+    align-items: center;
+  }
+
+  .hero-headline {
+    text-align: center;
+    font-size: 2.3rem;
+  }
+  
+  .hero-description {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .feature-pills-grid {
+    justify-content: center;
+  }
+
+  .cta-wrapper {
+    justify-content: center;
+  }
+
+  .coach-image {
+    max-height: 400px;
+  }
+
+  .ticket-wrapper-exact {
+    position: relative;
+    top: auto;
+    left: auto;
+    margin: 24px auto 0 auto;
+    max-width: 480px;
+    z-index: 30;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-container {
+    padding-top: 30px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero-headline {
+    font-size: 1.8rem;
+    line-height: 1.25;
+  }
+
+  .event-badge {
+    font-size: 0.75rem;
+    padding: 5px 12px;
+  }
+
+  .feature-pills-grid {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .pill-item {
+    width: auto;
+    justify-content: flex-start;
+  }
+
+  .ticket-wrapper-exact {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .ticket-body-left {
+    padding: 8px 6px;
+    gap: 8px;
+  }
+
+  .exact-ticket-title {
+    font-size: 1.05rem;
+    letter-spacing: 0.08em;
+  }
+
+  .exact-ticket-date {
+    font-size: 0.85rem;
+  }
+
+  .exact-ticket-time {
+    font-size: 0.68rem;
+  }
+
+  .exact-price-val {
+    font-size: 1.05rem;
+  }
+
+  .stub-admit-exact {
+    font-size: 0.8rem;
+  }
+
+  .btn-hero-cta {
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-between;
+    font-size: 0.98rem;
+    padding: 15px 22px;
+  }
+}
