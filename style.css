@@ -3765,12 +3765,19 @@ wistia-player[media-id='fj14znc3hy']:not(:defined) {
     font-size: 0.82rem;
     padding: 10px 12px;
   }
+  .step2-main-title{
+    font-size: 1.6rem;
+  }
   .step2-subtitle-malayalam {
     font-size: 1rem;
     margin-bottom: 24px;
   }
   .wistia-video-card {
+    
     border-radius: 14px;
+  }
+  .vip-upgrade-card{
+    margin-top: 0px;
   }
   .vip-upgrade-card,
   .vip-breakdown-card {
