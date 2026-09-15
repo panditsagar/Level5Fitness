@@ -3338,6 +3338,219 @@ body {
 }
 
 /* ==========================================================================
+   SECTION 11 — EMOTIONAL CLOSING SECTION Styles
+   ========================================================================== */
+
+.emotional-closing-section {
+  position: relative;
+  background: var(--bg-dark);
+ padding: 5px 24px 100px 24px;
+  border-top: none;
+}
+
+.closing-master-card {
+  width: 100%;
+  max-width: 1180px;
+ 
+  background: linear-gradient(180deg, var(--token-43913031-335a-4f87-8d69-23ffc3eeb97a, rgb(0, 0, 0)) 0%, var(--token-a4487852-5aec-4622-a28e-ed763882daa6  , rgb(0, 38, 20)) 100%);
+  border: none;
+  border-radius: 28px;
+  padding: 56px 48px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.badge-stack-center {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.family-pills-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.family-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f3f4f6;
+  letter-spacing: 0.01em;
+}
+
+.pill-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #00d55a;
+}
+
+.closing-quote-statement {
+  font-size: clamp(1rem, 1.8vw, 1.22rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.they-need-you-box {
+  background: rgba(0, 213, 90, 0.06);
+  border: none;
+  border-radius: 20px;
+  padding: 28px 24px;
+  margin-bottom: 30px;
+}
+
+.need-you-title {
+  font-size: clamp(1.35rem, 2.4vw, 1.65rem);
+  font-weight: 900;
+  color: #00d55a;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.need-you-flex-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.need-flex-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 213, 90, 0.12);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 100px;
+  font-size: 0.94rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+}
+
+.need-flex-full {
+  background: rgba(0, 213, 90, 0.18);
+  font-size: 0.98rem;
+}
+
+.check-icon {
+  color: #00d55a;
+  font-weight: 900;
+}
+
+.decision-choice-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 20px;
+  background: rgba(0, 0, 0, 0.35);
+  border: none;
+  border-radius: 18px;
+  padding: 24px 20px;
+  margin-bottom: 36px;
+}
+
+.choice-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+}
+
+.choice-sub {
+  font-size: 0.78rem;
+  font-weight: 800;
+  color: #9ca3af;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.green-sub {
+  color: #00d55a;
+}
+
+.choice-main {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.green-main {
+  color: #00ff6c;
+  font-size: 1.18rem;
+  font-weight: 900;
+}
+
+.choice-vs-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.8rem;
+  font-weight: 900;
+  color: #9ca3af;
+}
+
+.closing-cta-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media (max-width: 640px) {
+  .closing-master-card {
+    padding: 32px 18px;
+    border-radius: 20px;
+  }
+  .family-pills-row {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .family-pill {
+    width: 100%;
+    justify-content: center;
+  }
+  .need-you-flex-grid {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .need-flex-item {
+    width: 100%;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .decision-choice-row {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 20px 14px;
+  }
+}
+
+/* ==========================================================================
    Step 2 Page (step2.html) Styles
    ========================================================================== */
 
@@ -3796,3 +4009,123 @@ wistia-player[media-id='fj14znc3hy']:not(:defined) {
     padding: 14px 14px;
   }
 }
+
+/* ==========================================================================
+   SECTION 12 — FAT LOSS FITNESS FESTIVAL 2026 Styles (Full Width)
+   ========================================================================== */
+
+.festival-closing-section {
+  position: relative;
+  width: 100%;
+   background-color: #040906;
+  padding: 40px 24px;
+  border-top: 1px solid rgba(0, 213, 90, 0.2);
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.festival-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.festival-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(0, 213, 90, 0.12);
+  border: 1.5px solid rgba(0, 213, 90, 0.5);
+  color: #00d55a;
+  padding: 10px 24px;
+  border-radius: 100px;
+  font-size: clamp(0.85rem, 1.5vw, 1.05rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+  backdrop-filter: blur(10px);
+}
+
+.festival-headline {
+  font-size: clamp(1.8rem, 3.8vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.festival-desc {
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
+  color: #d1d5db;
+  line-height: 1.6;
+  max-width: 780px;
+  margin: 0 auto 36px auto;
+  font-weight: 500;
+}
+
+.festival-cta-wrapper {
+  margin-bottom: 18px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.btn-festival-cta {
+  max-width: 480px;
+  width: 100%;
+}
+
+.festival-subtag {
+  font-size: clamp(0.85rem, 1.4vw, 1.02rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.red-dot {
+  font-size: 0.85rem;
+}
+
+.festival-disclaimer {
+  font-size: clamp(0.75rem, 1.1vw, 0.85rem);
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.55;
+  max-width: 720px;
+  margin: 0 auto;
+  font-weight: 400;
+}
+
+/* Mobile responsive tweak for Section 12 */
+@media (max-width: 640px) {
+  .festival-closing-section {
+    padding: 60px 16px;
+  }
+  .festival-badge {
+    padding: 8px 16px;
+    font-size: 0.82rem;
+  }
+  .festival-headline {
+    font-size: 1.55rem;
+  }
+  .festival-desc {
+    font-size: 0.98rem;
+    margin-bottom: 28px;
+  }
+  .festival-subtag {
+    font-size: 0.8rem;
+  }
+}
+
