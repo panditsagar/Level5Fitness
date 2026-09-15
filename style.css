@@ -1335,7 +1335,7 @@ body {
   align-items: center;
   gap: 16px;
   background: linear-gradient(180deg, #0d1210 0%, #070b09 100%);
-  border: 1.5px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 20px 24px;
   text-align: left;
@@ -1355,7 +1355,7 @@ body {
   height: 36px;
   border-radius: 50%;
   background: rgba(225, 29, 72, 0.12);
-  border: 1px solid rgba(225, 29, 72, 0.35);
+
   flex-shrink: 0;
 }
 
@@ -1377,12 +1377,8 @@ body {
   max-width: 960px;
   margin: 0 auto 44px auto;
   padding: 32px 24px;
-  background: linear-gradient(
-    135deg,
-    rgba(20, 10, 12, 0.8) 0%,
-    rgba(10, 14, 12, 0.9) 100%
-  );
-  border: 1.5px dashed rgba(225, 29, 72, 0.4);
+  background: rgba(214, 0, 0, 0.1);
+
   border-radius: 20px;
   text-align: center;
   position: relative;
@@ -1412,17 +1408,10 @@ body {
   max-width: 960px;
   margin: 0 auto;
   padding: 40px 32px;
-  background: linear-gradient(
-    135deg,
-    rgba(4, 28, 17, 0.95) 0%,
-    rgba(2, 16, 10, 0.98) 100%
-  );
-  border: 2px solid #00d55a;
+  background: #032416;
+
   border-radius: 24px;
   text-align: center;
-  box-shadow:
-    0 0 35px rgba(0, 213, 90, 0.3),
-    inset 0 0 25px rgba(0, 213, 90, 0.15);
 }
 
 .solution-eyebrow {
@@ -1535,7 +1524,7 @@ body {
   align-items: center;
   gap: 10px;
   background: linear-gradient(180deg, #0e1612 0%, #080d0a 100%);
-  border: 1px solid rgba(0, 213, 90, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 12px 24px;
   border-radius: 100px;
   box-shadow:
@@ -1833,7 +1822,6 @@ body {
     #00d55a 88%,
     transparent 100%
   );
-  box-shadow: 0 0 10px rgba(0, 213, 90, 0.85);
 }
 
 /* Exact Glowing Green Bottom Divider Line Fading at Edges */
@@ -1851,7 +1839,6 @@ body {
     #00d55a 88%,
     transparent 100%
   );
-  box-shadow: 0 0 10px rgba(0, 213, 90, 0.85);
 }
 
 .secret-inner-list {
@@ -2124,8 +2111,7 @@ body {
 
 .testimonial-snippet-box {
   background: rgba(0, 213, 90, 0.08);
-  border: 1px solid rgba(0, 213, 90, 0.25);
-  border-radius: 10px;
+   border-radius: 10px;
   padding: 16px 18px;
   margin-top: auto;
   text-align: center;
@@ -2670,5 +2656,396 @@ body {
   }
   .who-check-text {
     font-size: 0.92rem;
+  }
+}
+
+/* ==========================================================================
+   Section 9: Free Offer / Value Stack Section
+   ========================================================================== */
+
+.free-offer-section {
+  position: relative;
+  width: 100%;
+  padding: 90px 24px 100px 24px;
+  background-color: #060908;
+  background: radial-gradient(circle at 50% 35%, rgba(0, 213, 90, 0.08) 0%, rgba(0, 38, 20, 0.15) 45%, #060908 75%);
+}
+
+.free-offer-section .section-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.offer-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(4, 20, 13, 0.88);
+  border: 1.5px solid rgba(0, 213, 90, 0.5);
+  color: #00d55a;
+  padding: 8px 22px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  box-shadow: 0 0 20px rgba(0, 213, 90, 0.25), inset 0 0 15px rgba(0, 213, 90, 0.15);
+  backdrop-filter: blur(12px);
+  text-transform: uppercase;
+}
+
+.offer-title {
+  margin-bottom: 44px;
+}
+
+.value-stack-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 40px auto;
+}
+
+.value-stack-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  flex: 0 0 calc((100% - 40px) / 3);
+  max-width: calc((100% - 40px) / 3);
+  aspect-ratio: 1 / 1;
+  min-height: 275px;
+  background: linear-gradient(180deg, var(--token-a4487852-5aec-4622-a28e-ed763882daa6, rgb(0, 0, 0)) 0%, var(--token-43913031-335a-4f87-8d69-23ffc3eeb97a, rgb(0, 38, 20)) 100%);
+  border: none;
+  border-radius: 20px;
+  padding: 28px 22px 24px 22px;
+  box-shadow: none;
+}
+
+.gift-bg-icon {
+  position: absolute;
+  right: -5px;
+  bottom: -5px;
+  width: 140px;
+  height: 140px;
+  stroke: rgba(0, 213, 90, 0.22);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.value-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+  margin-bottom: 4px;
+}
+
+.value-card-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff 35%, #00d55a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -0.01em;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.value-card-desc {
+  font-size: 1.1rem;
+  color: #d1d5db;
+  font-weight: 500;
+  line-height: 1.5;
+  margin: 8px 0 auto 0;
+  padding: 0 4px;
+  position: relative;
+  z-index: 2;
+}
+
+.value-card-footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 18px;
+  position: relative;
+  z-index: 2;
+}
+
+.value-price-tag {
+  background: linear-gradient(135deg, #00d55a 0%, #00a847 100%);
+  color: #040906;
+  font-size: 0.8rem;
+  font-weight: 900;
+  padding: 6px 16px;
+  border-radius: 100px;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Total Value Summary Box */
+.total-value-box {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto 36px auto;
+  background: linear-gradient(180deg, var(--token-a4487852-5aec-4622-a28e-ed763882daa6, rgb(0, 0, 0)) 0%, var(--token-43913031-335a-4f87-8d69-23ffc3eeb97a, rgb(0, 38, 20)) 100%);
+   border-radius: 20px;
+  padding: 36px 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 20px rgba(0, 213, 90, 0.08);
+}
+
+.total-value-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.total-value-label {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #9ca3af;
+  letter-spacing: 0.04em;
+}
+
+.total-value-strike {
+  font-size: 1.3rem;
+  font-weight: 800;
+  color: #ef4444;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.today-free-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.today-label {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.04em;
+}
+
+.today-free-tag {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #00d55a;
+  letter-spacing: 0.02em;
+  text-shadow: 0 0 12px rgba(0, 213, 90, 0.5);
+}
+
+.offer-cta-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.offer-cta-wrapper .btn-hero-cta {
+  max-width: 540px;
+}
+
+.offer-sub-cta {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #9ca3af;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Section 9 Responsive Queries */
+@media (max-width: 900px) {
+  .value-stack-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+    max-width: calc((100% - 20px) / 2);
+  }
+}
+
+@media (max-width: 640px) {
+  .free-offer-section {
+    padding: 60px 16px 70px 16px;
+  }
+  .value-stack-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    aspect-ratio: auto;
+    min-height: auto;
+  }
+  .total-value-box {
+    padding: 20px 16px;
+  }
+  .today-free-tag {
+    font-size: 1.35rem;
+  }
+}
+
+/* ==========================================================================
+   Section 10: FAQ Section
+   ========================================================================== */
+
+.faq-section {
+  position: relative;
+  width: 100%;
+  padding: 5px 24px 100px 24px;
+  background-color: #060908;
+  background: radial-gradient(circle at 50% 35%, rgba(0, 213, 90, 0.08) 0%, rgba(0, 38, 20, 0.15) 45%, #060908 75%);
+}
+
+.faq-section .section-container {
+  max-width: 980px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.faq-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(4, 20, 13, 0.88);
+  border: 1.5px solid rgba(0, 213, 90, 0.5);
+  color: #00d55a;
+  padding: 8px 22px;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  margin-bottom: 20px;
+  box-shadow: none;
+  backdrop-filter: blur(12px);
+  text-transform: uppercase;
+}
+
+.faq-title {
+  margin-bottom: 44px;
+}
+
+.faq-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.faq-card {
+  background: linear-gradient(180deg, var(--token-a4487852-5aec-4622-a28e-ed763882daa6, rgb(0, 0, 0)) 0%, var(--token-43913031-335a-4f87-8d69-23ffc3eeb97a, rgb(0, 38, 20)) 100%);
+  border: 1.5px solid rgba(0, 213, 90, 0.25);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+
+.faq-card:hover,
+.faq-card[open] {
+  border-color: rgba(0, 213, 90, 0.6);
+  box-shadow: none;
+}
+
+.faq-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.faq-summary::-webkit-details-marker,
+.faq-summary::marker {
+  display: none;
+}
+
+.faq-question-text {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 0.01em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.faq-icon-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(0, 213, 90, 0.12);
+  border: 1px solid rgba(0, 213, 90, 0.3);
+  color: #00d55a;
+  flex-shrink: 0;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.faq-card[open] .faq-chevron {
+  transform: rotate(180deg);
+}
+
+.faq-chevron {
+  transition: transform 0.25s ease;
+}
+
+.faq-answer-content {
+  padding: 0 24px 24px 24px;
+  border-top: 1px solid rgba(0, 213, 90, 0.12);
+  margin-top: 4px;
+  padding-top: 18px;
+}
+
+.faq-ans-highlight {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #00d55a;
+  margin-bottom: 8px;
+}
+
+.faq-ans-highlight.free-highlight {
+  font-size: 1.3rem;
+  font-weight: 900;
+  margin-bottom: 0;
+}
+
+.faq-ans-desc {
+  font-size: 0.98rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+/* Section 10 Responsive Queries */
+@media (max-width: 640px) {
+  .faq-section {
+    padding: 60px 16px 70px 16px;
+  }
+  .faq-summary {
+    padding: 18px 16px;
+  }
+  .faq-question-text {
+    font-size: 0.95rem;
+  }
+  .faq-answer-content {
+    padding: 14px 16px 18px 16px;
   }
 }
