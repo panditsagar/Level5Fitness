@@ -25,4 +25,22 @@ document.addEventListener('DOMContentLoaded', () => {
       updateSlider(rangeInput.value || 50);
     }
   });
+
+  // Interactive Section 8 Checklist Cards Toggle
+  const whoCards = document.querySelectorAll('.who-checklist-card');
+  whoCards.forEach(card => {
+    const checkbox = card.querySelector('.who-checkbox');
+    if (checkbox) {
+      const updateState = () => {
+        if (checkbox.checked) {
+          card.classList.add('is-active');
+        } else {
+          card.classList.remove('is-active');
+        }
+      };
+
+      checkbox.addEventListener('change', updateState);
+      updateState();
+    }
+  });
 });
