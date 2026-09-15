@@ -3336,3 +3336,455 @@ body {
     font-size: 1.15rem;
   }
 }
+
+/* ==========================================================================
+   Step 2 Page (step2.html) Styles
+   ========================================================================== */
+
+.step2-body {
+  background-color: #060908;
+  background: 
+    radial-gradient(circle at 50% 10%, rgba(0, 213, 90, 0.16) 0%, transparent 50%),
+    radial-gradient(circle at 50% 90%, rgba(0, 38, 20, 0.3) 0%, transparent 60%),
+    #060908;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Malayalam', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Top Announcement Expiration Bar */
+.top-expiration-bar {
+  background: linear-gradient(90deg, #dc2626 0%, #991b1b 100%);
+  color: #ffffff;
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 0.92rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.expiration-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.exp-date {
+  color: #fef08a;
+}
+
+/* Step 2 Page Wrapper */
+.step2-page-wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 20px 60px 20px;
+}
+
+.step2-content-flow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Order Progress Indicator Pill */
+.order-progress-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(12, 24, 17, 0.85);
+  border: 1px solid rgba(0, 213, 90, 0.3);
+  border-radius: 100px;
+  padding: 10px 22px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  color: #a3b8ac;
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+
+.order-progress-pill strong {
+  color: #00d55a;
+}
+
+/* Step 2 Pill Badge */
+.step2-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(0, 213, 90, 0.12);
+  border: 1.5px solid rgba(0, 213, 90, 0.45);
+  color: #00d55a;
+  padding: 8px 24px;
+  border-radius: 100px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.malayalam-text {
+  font-family: 'Noto Sans Malayalam', sans-serif;
+}
+
+/* Main Headline */
+.step2-main-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  margin-bottom: 24px;
+  line-height: 1.25;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Malayalam Notice Card */
+/* Malayalam Subtitle Text (Open, No Card) */
+.step2-subtitle-malayalam {
+  font-family: 'Noto Sans Malayalam', 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #a3b8ac;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 32px;
+  max-width: 980px;
+  text-align: center;
+}
+
+/* Wistia Video Player Showcase */
+.video-showcase-wrapper {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+ 
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-showcase-wrapper:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+  transform: translateY(-2px);
+}
+
+.sound-on-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, rgba(0, 213, 90, 0.22) 0%, rgba(4, 28, 16, 0.95) 100%);
+  border: none;
+  color: #00ff6c;
+  padding: 12px 24px;
+  border-radius: 0;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+
+.wistia-video-card {
+  width: 100%;
+  border: none;
+  border-radius: 0;
+  overflow: hidden;
+  background: #030805;
+}
+
+/* Wistia Player Element & Swatch Styling */
+wistia-player {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 0 0 12px 12px;
+  overflow: hidden;
+  --wistia-player-color: #00d55a;
+}
+
+wistia-player[media-id='fj14znc3hy']:not(:defined) {
+  background: center/cover no-repeat url('https://fast.wistia.com/embed/medias/fj14znc3hy/swatch');
+  display: block;
+  filter: blur(5px);
+  padding-top: 56.25%;
+}
+
+/* VIP Upgrade & Breakdown Full-Width Section Styles */
+.vip-upgrade-card,
+.vip-breakdown-card {
+  width: 100%;
+  margin-top: 48px;
+  background: linear-gradient(180deg, rgba(12, 26, 18, 0.95) 0%, rgba(6, 16, 11, 0.98) 100%);
+  border: none;
+  border-radius: 0;
+  padding: 56px 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.vip-card-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.vip-upgrade-title {
+  font-size: clamp(1.4rem, 3.2vw, 2rem);
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: 0.02em;
+  margin-bottom: 28px;
+  text-transform: uppercase;
+  line-height: 1.3;
+}
+
+.vip-checklist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto 32px auto;
+  text-align: left;
+}
+
+.vip-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(0, 213, 90, 0.05);
+  border: 1px solid rgba(0, 213, 90, 0.18);
+  border-radius: 12px;
+  padding: 14px 20px;
+}
+
+.vip-check-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0, 213, 90, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.vip-item-text {
+  font-size: 1.05rem;
+  color: #ffffff;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.vip-item-text strong {
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.worth-tag {
+  color: #fcd34d;
+  font-weight: 700;
+  margin-left: 4px;
+}
+
+/* VIP CTA Button */
+.vip-cta-wrapper {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.btn-vip-upgrade {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  max-width: 780px;
+  padding: 20px 36px;
+  background: linear-gradient(135deg, #00d55a 0%, #00a843 100%);
+  color: #040906;
+  border-radius: 100px;
+  font-size: 1.18rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0, 213, 90, 0.35);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.btn-vip-upgrade:hover {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 15px 38px rgba(0, 213, 90, 0.5);
+  background: linear-gradient(135deg, #00ff6c 0%, #00c74f 100%);
+}
+
+/* Decline Bar Button */
+.vip-decline-wrapper {
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.btn-vip-decline {
+  display: block;
+  background: #262626;
+  color: #d1d5db;
+  border-radius: 10px;
+  padding: 16px 20px;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.55;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-vip-decline:hover {
+  background: #333333;
+  color: #ffffff;
+}
+
+/* Secondary VIP Breakdown Card Styles */
+.keep-in-mind-headline {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 24px;
+  line-height: 1.4;
+}
+
+.dashed-warning-box {
+  border: 2px dashed rgba(239, 68, 68, 0.65);
+  background: rgba(239, 68, 68, 0.06);
+  border-radius: 16px;
+  padding: 24px 28px;
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.dashed-box-title {
+  font-size: 1.25rem;
+  font-weight: 900;
+  color: #f87171;
+  letter-spacing: 0.05em;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
+
+.dashed-box-desc {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.vip-pitch-statement {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 12px;
+}
+
+.text-emerald {
+  color: #00d55a;
+  font-weight: 800;
+}
+
+.vip-value-summary-text {
+  font-size: 1.08rem;
+  color: #d1d5db;
+  line-height: 1.55;
+  margin-bottom: 28px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.strike-value {
+  text-decoration: line-through;
+  color: #f87171;
+  font-weight: 800;
+}
+
+.discount-value {
+  color: #00d55a;
+  font-weight: 900;
+  font-size: 1.18rem;
+}
+
+.total-val-title {
+  color: #ffffff;
+}
+
+.total-val-price {
+  color: #f87171;
+  text-decoration: line-through;
+}
+
+.pay-today-notice {
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 28px;
+}
+
+.one-time-tag {
+  color: #00d55a;
+  font-weight: 900;
+}
+
+/* Responsive Styles for Step 2 Page */
+@media (max-width: 640px) {
+  .step2-page-wrapper {
+    padding: 24px 16px 40px 16px;
+  }
+  .top-expiration-bar {
+    font-size: 0.82rem;
+    padding: 10px 12px;
+  }
+  .step2-subtitle-malayalam {
+    font-size: 1rem;
+    margin-bottom: 24px;
+  }
+  .wistia-video-card {
+    border-radius: 14px;
+  }
+  .vip-upgrade-card,
+  .vip-breakdown-card {
+    padding: 32px 16px;
+    border-radius: 0;
+  }
+  .dashed-warning-box {
+    padding: 18px 14px;
+  }
+  .btn-vip-upgrade {
+    padding: 16px 20px;
+    font-size: 0.96rem;
+  }
+  .btn-vip-decline {
+    font-size: 0.78rem;
+    padding: 14px 14px;
+  }
+}
