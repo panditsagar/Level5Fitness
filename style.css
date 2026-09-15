@@ -3393,38 +3393,39 @@ body {
   text-align: center;
 }
 
-/* Order Progress Indicator Pill */
+/* Order Progress Indicator Text */
 .order-progress-pill {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: rgba(12, 24, 17, 0.85);
-  border: 1px solid rgba(0, 213, 90, 0.3);
-  border-radius: 100px;
-  padding: 10px 22px;
-  font-size: 0.9rem;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  font-size: 0.95rem;
   font-weight: 800;
   color: #a3b8ac;
   letter-spacing: 0.05em;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
 }
 
 .order-progress-pill strong {
   color: #00d55a;
 }
 
-/* Step 2 Pill Badge */
+/* Step 2 Badge Text */
 .step2-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  background: rgba(0, 213, 90, 0.12);
-  border: 1.5px solid rgba(0, 213, 90, 0.45);
+  background: transparent;
+  border: none;
   color: #00d55a;
-  padding: 8px 24px;
-  border-radius: 100px;
-  font-size: 1.1rem;
+  padding: 0;
+  border-radius: 0;
+  font-size: 1.15rem;
   font-weight: 800;
   margin-bottom: 16px;
   text-transform: uppercase;
