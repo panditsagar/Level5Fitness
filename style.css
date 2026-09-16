@@ -4108,6 +4108,219 @@ wistia-player[media-id='fj14znc3hy']:not(:defined) {
   font-weight: 400;
 }
 
+/* ==========================================================================
+   Registration Popup Form
+   ========================================================================== */
+
+.registration-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.registration-modal.is-open {
+  display: flex;
+}
+
+.registration-modal__backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(0, 213, 90, 0.2), transparent 36%),
+    rgba(2, 6, 4, 0.82);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.registration-modal__dialog {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 480px);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  background:
+    linear-gradient(180deg, rgba(12, 28, 18, 0.98) 0%, rgba(4, 9, 6, 0.98) 100%);
+  border: 1.5px solid rgba(0, 213, 90, 0.38);
+  border-radius: 24px;
+  padding: 34px;
+  color: #ffffff;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.78),
+    0 0 38px rgba(0, 213, 90, 0.18);
+}
+
+.registration-modal__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 38px;
+  height: 38px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  font-size: 1.55rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.registration-modal__close:hover,
+.registration-modal__close:focus-visible {
+  background: rgba(0, 213, 90, 0.14);
+  border-color: rgba(0, 213, 90, 0.55);
+  transform: scale(1.04);
+  outline: none;
+}
+
+.registration-modal__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 18px;
+  padding: 8px 16px;
+  border: 1px solid rgba(0, 213, 90, 0.5);
+  border-radius: 100px;
+  background: rgba(0, 213, 90, 0.1);
+  color: #00d55a;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+}
+
+.registration-modal__title {
+  margin: 0 0 10px 0;
+  font-size: clamp(1.45rem, 3.5vw, 1.85rem);
+  line-height: 1.1;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.registration-modal__subtitle {
+  margin: 0 0 24px 0;
+  color: #a3b8ac;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  font-weight: 600;
+}
+
+.registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-field label {
+  color: #f3f4f6;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.form-field input {
+  width: 100%;
+  min-height: 52px;
+  border: 1.5px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  padding: 0 16px;
+  font: 700 0.92rem var(--font-family);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.form-field input::placeholder {
+  color: rgba(255, 255, 255, 0.42);
+}
+
+.form-field input:focus {
+  border-color: rgba(0, 213, 90, 0.8);
+  background: rgba(0, 213, 90, 0.08);
+  box-shadow: 0 0 0 4px rgba(0, 213, 90, 0.14);
+  outline: none;
+}
+
+.form-field.is-invalid input {
+  border-color: rgba(248, 113, 113, 0.9);
+  box-shadow: 0 0 0 4px rgba(248, 113, 113, 0.12);
+}
+
+.field-error {
+  min-height: 18px;
+  color: #fca5a5;
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.form-submit-message {
+  min-height: 20px;
+  color: #fca5a5;
+  font-size: 0.76rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.form-submit-message.is-success {
+  color: #00d55a;
+}
+
+.registration-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 56px;
+  margin-top: 4px;
+  border: 1.5px solid rgba(255, 255, 255, 0.28);
+  border-radius: 100px;
+  background: linear-gradient(135deg, #00e664 0%, #00b84d 100%);
+  color: #040906;
+  cursor: pointer;
+  font: 900 0.92rem var(--font-family);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.registration-submit:hover,
+.registration-submit:focus-visible {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #24f27d 0%, #00c954 100%);
+  outline: none;
+}
+
+.registration-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+  transform: none;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Mobile responsive tweak for Section 12 */
 @media (max-width: 640px) {
   .festival-closing-section {
@@ -4126,6 +4339,19 @@ wistia-player[media-id='fj14znc3hy']:not(:defined) {
   }
   .festival-subtag {
     font-size: 0.8rem;
+  }
+  .registration-modal {
+    padding: 14px;
+  }
+  .registration-modal__dialog {
+    border-radius: 18px;
+    padding: 28px 18px 20px;
+  }
+  .registration-modal__close {
+    top: 10px;
+    right: 10px;
+    width: 34px;
+    height: 34px;
   }
 }
 

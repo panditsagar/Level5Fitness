@@ -2019,6 +2019,106 @@
       </div>
     </section>
 
+    <div
+      class="registration-modal"
+      id="registrationModal"
+      aria-hidden="true"
+    >
+      <div class="registration-modal__backdrop" data-modal-close></div>
+      <div
+        class="registration-modal__dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="registrationModalTitle"
+      >
+        <button
+          class="registration-modal__close"
+          type="button"
+          aria-label="Close registration form"
+          data-modal-close
+        >
+          &times;
+        </button>
+
+     
+
+        <h2 class="registration-modal__title" id="registrationModalTitle">
+          Reserve Your Free Seat
+        </h2>
+        <p class="registration-modal__subtitle">
+          Enter your details and we will confirm your spot for the live fat-loss
+          masterclass.
+        </p>
+
+        <form
+          class="registration-form"
+          id="registrationForm"
+          action="https://formsapi.hashboard.in/public/forms/vEZ1cXtr2n/submit"
+          method="POST"
+          novalidate
+        >
+          <div class="form-field">
+            <label for="leadName">Name</label>
+            <input
+              type="text"
+              id="leadName"
+              name="name"
+              autocomplete="name"
+              placeholder="Your full name"
+              required
+            />
+            <p class="field-error" id="leadNameError"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="leadEmail">Email</label>
+            <input
+              type="email"
+              id="leadEmail"
+              name="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <p class="field-error" id="leadEmailError"></p>
+          </div>
+
+          <div class="form-field">
+            <label for="leadPhone">Phone</label>
+            <input
+              type="tel"
+              id="leadPhone"
+              name="phone"
+              autocomplete="tel"
+              inputmode="tel"
+              pattern="[\d\s()+-]{10,20}"
+              placeholder="+91 98765 43210"
+              required
+            />
+            <p class="field-error" id="leadPhoneError"></p>
+          </div>
+
+          <button class="registration-submit" type="submit">
+            <span>Reserve My Free Seat</span>
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="3"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </button>
+          <p class="form-submit-message" id="registrationSubmitMessage"></p>
+        </form>
+      </div>
+    </div>
+
     <script src="script.js"></script>
   </body>
 </html>
