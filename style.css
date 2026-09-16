@@ -1680,6 +1680,12 @@ body {
   );
 }
 
+.learn-section .section-title {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .learn-badge {
   display: inline-flex;
   align-items: center;
@@ -2410,45 +2416,174 @@ body {
 
 /* Section 7 Responsive Queries */
 @media (max-width: 1040px) {
+  .coach-orbit-header {
+    margin-bottom: 44px;
+  }
+
   .coach-orbit-wrapper {
     grid-template-columns: 1fr;
-    gap: 40px;
-    max-width: 580px;
+    gap: 26px;
+    max-width: 680px;
   }
+
   .orbit-center-col {
     grid-row: 1;
   }
+
   .orbit-left-col {
     grid-row: 2;
   }
+
   .orbit-right-col {
     grid-row: 3;
   }
+
+  .orbit-col {
+    width: 100%;
+    gap: 18px;
+    align-self: stretch;
+    margin-top: 0;
+  }
+
+  .node-left-1,
+  .node-left-2,
+  .node-left-3,
+  .node-right-1,
+  .node-right-2,
+  .node-right-3 {
+    transform: none;
+  }
+
   .orbit-left-col .orbit-node-item,
   .orbit-right-col .orbit-node-item {
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
+
+  .orbit-left-col .orbit-node-item {
+    flex-direction: row-reverse;
+  }
+
   .orbit-left-col .orbit-node-text,
   .orbit-right-col .orbit-node-text {
-    text-align: center;
+    flex: 1;
+    text-align: left;
     max-width: 100%;
   }
+
   .orbit-dot-line {
-    display: none;
+    display: block;
+    width: 26px;
+    margin-top: 10px;
+  }
+
+  .orbit-dot {
+    margin-top: 5px;
+  }
+
+  .coach-portrait-wrapper {
+    width: min(74vw, 360px);
+    height: min(74vw, 360px);
+  }
+
+  .coach-gradient-circle {
+    width: min(66vw, 320px);
+    height: min(66vw, 320px);
+  }
+
+  .orbit-coach-img {
+    height: min(80vw, 380px);
+    max-width: 100%;
+  }
+
+  .orbit-cta-wrapper {
+    margin-top: 28px;
+  }
+
+  .orbit-watermark {
+    font-size: clamp(3.5rem, 14vw, 6.5rem);
+  }
+
+  .wm-left {
+    top: -36px;
+    left: -20px;
+  }
+
+  .wm-right {
+    right: -20px;
+    bottom: 20px;
   }
 }
 
 @media (max-width: 640px) {
   .coach-story-section {
-    padding: 60px 16px 70px 16px;
+    padding: 56px 16px 84px 16px;
   }
-  .orbit-ring-container {
-    width: 290px;
-    height: 290px;
+
+  .coach-orbit-header {
+    margin-bottom: 30px;
   }
-  .coach-portrait-frame {
-    width: 240px;
-    height: 240px;
+
+  .coach-orbit-wrapper {
+    gap: 22px;
+    max-width: 100%;
+  }
+
+  .coach-portrait-wrapper {
+    width: min(86vw, 310px);
+    height: min(86vw, 310px);
+    margin-bottom: 0;
+  }
+
+  .coach-gradient-circle {
+    width: min(76vw, 270px);
+    height: min(76vw, 270px);
+    bottom: 8px;
+  }
+
+  .orbit-coach-img {
+    height: min(92vw, 330px);
+    margin-bottom: 14px;
+  }
+
+  .orbit-cta-wrapper {
+    margin-top: 18px;
+  }
+
+  .orbit-col {
+    gap: 14px;
+  }
+
+  .orbit-node-item {
+    gap: 10px;
+  }
+
+  .orbit-node-text {
+    font-size: 0.86rem;
+    line-height: 1.45;
+  }
+
+  .orbit-dot-line {
+    width: 18px;
+  }
+
+  .orbit-dot {
+    width: 10px;
+    height: 10px;
+  }
+
+  .orbit-watermark {
+    font-size: clamp(3rem, 18vw, 4.8rem);
+  }
+
+  .wm-left {
+    top: -24px;
+    left: -12px;
+  }
+
+  .wm-right {
+    right: -16px;
+    bottom: 40px;
   }
 }
 
@@ -4349,8 +4484,43 @@ body.modal-open {
   overflow: hidden;
 }
 
+.mobile-sticky-cta {
+  display: none;
+}
+
 /* Mobile responsive tweak for Section 12 */
 @media (max-width: 640px) {
+  body.has-mobile-sticky-cta {
+    padding-bottom: calc(92px + env(safe-area-inset-bottom));
+  }
+
+  .mobile-sticky-cta {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9000;
+    display: flex;
+    justify-content: center;
+    padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
+    background: rgba(4, 9, 6, 0.92);
+    border-top: 1px solid rgba(0, 213, 90, 0.3);
+    box-shadow: 0 -16px 36px rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+
+  body.modal-open .mobile-sticky-cta {
+    display: none;
+  }
+
+  .mobile-sticky-cta__button {
+    max-width: 420px;
+    min-height: 52px;
+    padding: 13px 16px;
+    font-size: 0.84rem;
+  }
+
   .festival-closing-section {
     padding: 60px 16px;
   }
